@@ -1,12 +1,19 @@
-const obj = {
-   name: "Dmitry",
-   age: 21,
-   sister: true
+const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
+
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
 };
 
-console.log(obj.sister);
+const a = prompt('Один из просмотренных фильмов?', ''),
+      b = prompt('На сколько оцените его?', ''),
+      c = prompt('Один из просмотренных фильмов?', ''),
+      d = prompt('На сколько оцените его?', '');
 
-let arr = [1, 2, 3, 4, 5];
+personalMovieDB.movies[a] = b;
+personalMovieDB.movies[c] = d;
 
-arr[0] = "Dmitry";
-console.log(arr[0]);
+console.log(personalMovieDB);
